@@ -1,0 +1,10 @@
+keyman.c
+
+The program keyman is created keeping linux newbies in mind. It provides a quick way to look at brief description, synopsis and format of the command as the user types it. This program requires a screen manager eg GNU Screen which can split the terminal into two regions having different tty file names.
+
+man2.sh is a shell script which is used by keyman. man2.sh redirects output and error stream to the other region (ie tty on which you are not working).
+
+Keyman works in the background, always listening to the "Linux Input Subsystem" [See Appendix for details]. As soon as the command is typed and spacebar is pressed it prints out few selected lines from the man page of the command typed.
+
+If there is no such command or if it is misspelled, it prints the corresponding error. 
+For Example : "No manual entry for unmount"
